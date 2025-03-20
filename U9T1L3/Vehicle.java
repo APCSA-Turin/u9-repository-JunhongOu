@@ -8,6 +8,15 @@ public class Vehicle {
       this.tollFee = tollFee;
       this.passengers = passengers;
     }
+
+    public void setPassengers(int newPassengers){
+        passengers = newPassengers;
+    }
+
+    public void setTollFee(double newFee){
+      tollFee = newFee;
+  }
+
   
     public String getLicensePlate() {
       return licensePlate;

@@ -16,6 +16,17 @@ public class Truck extends Vehicle {
       return hasTrailer;
     }
 
+    public boolean validateLicensePlate(){
+      if (hasTrailer){
+          String finalTwo = getLicensePlate().substring(getLicensePlate().length() - 2);
+          boolean valid = (finalTwo.equals("MX") && axles > 4 || (finalTwo.equals("LX") && axles <= 4));
+          return valid;
+      }
+      else{
+          return true;
+      }    
+    }
+
     public void printTruck(){
         System.out.println("License Plate: " + getLicensePlate());
         System.out.println("Toll Fee: " + getTollFee());
